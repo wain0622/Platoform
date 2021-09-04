@@ -6,16 +6,24 @@ public class PlayerScript : MonoBehaviour
 {
     public Rigidbody rb;
     public float speed;
+    public bool isGround; 
     // Start is called before the first frame update
     void Start()
     {
-        
+        isGround = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (isGround)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                rb.AddForce(0, 10, 0,ForceMode.Impulse);
+                isGround = false;
+            }
+        }
 
     }
 
@@ -33,5 +41,18 @@ public class PlayerScript : MonoBehaviour
         {
             rb.velocity = Vector3.zero;
         }
+
+       
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+      if (collision.gameObject.tag == "Ground")
+        {
+
+            isGround = true;
+        }
+    }
+
+
 } 
