@@ -153,7 +153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7381cf86b13e948e08acb861918cb840, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7381cf86b13e948e08acb861918cb840, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -283,7 +283,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 352cd9d2cd1ec4d2c9a9f8f9d565ba7d, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 352cd9d2cd1ec4d2c9a9f8f9d565ba7d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -344,7 +344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 81159fc0fd98240cba19e8cd01d8d851, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 81159fc0fd98240cba19e8cd01d8d851, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1073,6 +1073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 884569877}
   speed: -0.2
+  isGround: 0
 --- !u!4 &884569880 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 81159fc0fd98240cba19e8cd01d8d851,
@@ -1154,7 +1155,7 @@ GameObject:
   - component: {fileID: 1037486896}
   m_Layer: 0
   m_Name: kusa
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1229,7 +1230,7 @@ Transform:
   m_LocalScale: {x: 496.85022, y: 1, z: 9.721664}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1146207335
 PrefabInstance:
@@ -1773,7 +1774,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 384fca862bde849af986f075a86a6b8b, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 384fca862bde849af986f075a86a6b8b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
