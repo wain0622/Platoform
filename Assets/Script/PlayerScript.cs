@@ -32,10 +32,8 @@ public class PlayerScript : MonoBehaviour
         var hori= Input.GetAxisRaw("Horizontal");
         var moveVector = new Vector3(hori, 0, 0);
         rb.velocity += moveVector*speed;
-        if (Input.GetKeyUp(KeyCode.A))
-        {
-            rb.velocity = Vector3.zero ;
-        }
+    
+       
 
         if (Input.GetKeyUp(KeyCode.D))
         {
