@@ -312,7 +312,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: adaaa74a0bd634312a9185084bcd97ef, type: 3}
       propertyPath: m_Name
-      value: Booy@Idle
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: adaaa74a0bd634312a9185084bcd97ef, type: 3}
       propertyPath: m_LocalPosition.x
