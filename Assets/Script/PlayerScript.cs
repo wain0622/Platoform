@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -49,6 +50,18 @@ public class PlayerScript : MonoBehaviour
         {
 
             isGround = true;
+        }
+
+      if (collision.gameObject.tag == "Mmikamaru")
+        {
+            Debug.Log("ゲームオーバー");
+        }
+
+
+
+        if (collision.gameObject.tag == "HitPoint")
+        {
+            Destroy(collision.gameObject.transform.parent.gameObject);
         }
     }
 
