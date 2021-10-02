@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Mmikamaru
   - HitPoint
+  - Flag
   layers:
   - Default
   - TransparentFX

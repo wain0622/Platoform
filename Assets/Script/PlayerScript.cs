@@ -63,6 +63,11 @@ public class PlayerScript : MonoBehaviour
         {
             Destroy(collision.gameObject.transform.parent.gameObject);
         }
+
+        if (collision.gameObject.tag == "Flag")
+        {
+            SceneManager.LoadScene("Success");
+        }
     }
 
 
