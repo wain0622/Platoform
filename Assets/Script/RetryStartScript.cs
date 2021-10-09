@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-public class RetryScript : MonoBehaviour
+public class RetryStartScript : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,14 +13,14 @@ public class RetryScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.R))
-        {
-            SceneManager.LoadScene("GameScene");
-        }
-
         if (Input.GetKey(KeyCode.S))
         {
             SceneManager.LoadScene("StartScene");
+        }
+
+        if (Input.GetKey(KeyCode.R))
+        {
+            SceneManager.LoadScene("GameScene");
         }
     }
 }
