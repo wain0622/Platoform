@@ -16,7 +16,7 @@ public class RetryScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.R))
         {
-            SceneManager.LoadScene("GameScene");
+            SceneManager.LoadScene("Stege1");
         }
 
         if (Input.GetKey(KeyCode.S))

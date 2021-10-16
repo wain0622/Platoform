@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
 public class PlayerScript : MonoBehaviour
 {
     public Rigidbody rb;
     public float speed;
-    public bool isGround; 
+    public bool isGround;
+    public int Score;
+    public Text ScoreText;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,7 @@ public class PlayerScript : MonoBehaviour
                 isGround = false;
             }
         }
-
+        ScoreText.text = "Score:" + Score;
     }
 
     private void FixedUpdate()

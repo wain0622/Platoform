@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class SuccessScript : MonoBehaviour
+using UnityEngine.SceneManagement;
+public class SceneSelect : MonoBehaviour
 {
+    public string SceneNeme;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +15,10 @@ public class SuccessScript : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void OnClick()
+    {
+        SceneManager.LoadScene(SceneNeme);
     }
 }

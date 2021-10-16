@@ -15,7 +15,7 @@ public class StartScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.S))
         {
-            SceneManager.LoadScene("GameScene");
+            SceneManager.LoadScene("SceneSelect");
         }
     }
 }
