@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CoinScript : MonoBehaviour
 {
+    public int Score;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class CoinScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player") 
         {
+            Score++;
             Destroy(this.gameObject);
         }
     }
