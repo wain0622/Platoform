@@ -28,6 +28,11 @@ public class PlayerScript : MonoBehaviour
             }
         }
         ScoreText.text = "Score:" + Score;
+
+        if (transform.position.y < -18)
+        {
+            SceneManager.LoadScene("GameOverScene");
+        }
     }
 
     private void FixedUpdate()
@@ -69,6 +74,7 @@ public class PlayerScript : MonoBehaviour
         if (collision.gameObject.tag == "Flag")
         {
             SceneManager.LoadScene("Success");
+
         }
     }
 
