@@ -10,6 +10,7 @@ public class PlayerScript : MonoBehaviour
     public bool isGround;
     public int Score;
     public Text ScoreText;
+    public GameObject Pleyer;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,7 +52,7 @@ public class PlayerScript : MonoBehaviour
        
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)//ここからタグを使った当たり判定のプログラム
     {
       if (collision.gameObject.tag == "Ground")
         {
@@ -71,12 +72,27 @@ public class PlayerScript : MonoBehaviour
             Destroy(collision.gameObject.transform.parent.gameObject);
         }
 
+        if (collision.gameObject.tag == "Dead")
+        {
+            SceneManager.LoadScene("GameOverScene");
+        }
+
+        if (collision.gameObject.tag == "Warp")
+        {
+            StartCoroutine(GameOver());
+        }
+
         if (collision.gameObject.tag == "Flag")
         {
             SceneManager.LoadScene("Success");
 
         }
     }
-
+    IEnumerator GameOver()
+    {
+        transform.position = new Vector3(0, -16, 0);
+        yield return new WaitForSeconds(1.0f);
+        SceneManager.LoadScene("GameOverScene");
+    }
 
 } 

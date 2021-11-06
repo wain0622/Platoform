@@ -8,6 +8,8 @@ TagManager:
   - Mmikamaru
   - HitPoint
   - Flag
+  - Dead
+  - Warp
   layers:
   - Default
   - TransparentFX
