@@ -24,7 +24,7 @@ public class CoinScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            playerScript.Score++;
+            playerScript.score++;
             Destroy(this.gameObject);
         }
     }

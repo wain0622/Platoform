@@ -16,7 +16,7 @@ public class Ritry : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.R))
         {
-            SceneManager.LoadScene("Stege2");
+            SceneManager.LoadScene("Stage2");
         }
 
         if (Input.GetKey(KeyCode.S))

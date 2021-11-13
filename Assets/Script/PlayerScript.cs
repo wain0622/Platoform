@@ -8,15 +8,19 @@ public class PlayerScript : MonoBehaviour
     public Rigidbody rb;
     public float speed;
     public bool isGround;
-    public int Score;
-    public Text ScoreText;
-    public GameObject Pleyer;
+    public int score;
+    public Text scoreText;
+    public GameObject pleyer;
+    public static int life;
     // Start is called before the first frame update
     void Start()
     {
         isGround = false;
     }
-
+    private void Awake()
+    {
+        life = 5;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -24,11 +28,10 @@ public class PlayerScript : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                rb.AddForce(0, 10, 0,ForceMode.Impulse);
+                rb.AddForce(0, 5, 0,ForceMode.Impulse);
                 isGround = false;
             }
         }
-        ScoreText.text = "Score:" + Score;
 
         if (transform.position.y < -18)
         {
@@ -62,7 +65,9 @@ public class PlayerScript : MonoBehaviour
 
       if (collision.gameObject.tag == "Mmikamaru")
         {
-            Debug.Log("ゲームオーバー");
+            SceneManager.LoadScene("GameOverScene");
+            life--;
+            
         }
 
 
