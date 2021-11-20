@@ -11,15 +11,11 @@ public class PlayerScript : MonoBehaviour
     public int score;
     public Text scoreText;
     public GameObject pleyer;
-    public static int life;
+    public static int life = 5;
     // Start is called before the first frame update
     void Start()
     {
         isGround = false;
-    }
-    private void Awake()
-    {
-        life = 5;
     }
     // Update is called once per frame
     void Update()
@@ -36,6 +32,7 @@ public class PlayerScript : MonoBehaviour
         if (transform.position.y < -18)
         {
             SceneManager.LoadScene("GameOverScene");
+            life--;
         }
     }
 
@@ -80,6 +77,7 @@ public class PlayerScript : MonoBehaviour
         if (collision.gameObject.tag == "Dead")
         {
             SceneManager.LoadScene("GameOverScene");
+            life--;
         }
 
         if (collision.gameObject.tag == "Warp")
@@ -98,6 +96,7 @@ public class PlayerScript : MonoBehaviour
         transform.position = new Vector3(0, -16, 0);
         yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene("GameOverScene");
+        life--;
     }
 
 } 
