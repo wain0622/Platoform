@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - Mmikamaru
   - HitPoint
   - Flag
   - Dead
@@ -20,7 +19,7 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
+  - tama
   - 
   - 
   - 

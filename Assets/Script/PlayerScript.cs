@@ -90,6 +90,11 @@ public class PlayerScript : MonoBehaviour
             SceneManager.LoadScene("Success");
 
         }
+
+        if (collision.gameObject.tag == "Tama")
+        {
+            SceneManager.LoadScene("GameOverScene");
+        }
     }
     IEnumerator GameOver()
     {
