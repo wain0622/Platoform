@@ -24,7 +24,7 @@ public class PlayerScript : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                rb.AddForce(0, 5, 0,ForceMode.Impulse);
+                rb.AddForce(0, 5, 0, ForceMode.Impulse);
                 isGround = false;
             }
         }
@@ -38,36 +38,27 @@ public class PlayerScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        var hori= Input.GetAxisRaw("Horizontal");
+        var hori = Input.GetAxisRaw("Horizontal");
         var moveVector = new Vector3(hori, 0, 0);
-        rb.velocity += moveVector*speed;
-    
-       
+        rb.velocity += moveVector * speed;
+
+
 
         if (Input.GetKeyUp(KeyCode.D))
         {
             rb.velocity = Vector3.zero;
         }
 
-       
+
     }
 
     private void OnCollisionEnter(Collision collision)//ここからタグを使った当たり判定のプログラム
     {
-      if (collision.gameObject.tag == "Ground")
+        if (collision.gameObject.tag == "Ground")
         {
-
+            
             isGround = true;
         }
-
-      if (collision.gameObject.tag == "Mmikamaru")
-        {
-            SceneManager.LoadScene("GameOverScene");
-            life--;
-            
-        }
-
-
 
         if (collision.gameObject.tag == "HitPoint")
         {
@@ -90,11 +81,6 @@ public class PlayerScript : MonoBehaviour
             SceneManager.LoadScene("Success");
 
         }
-
-        if (collision.gameObject.tag == "Tama")
-        {
-            SceneManager.LoadScene("GameOverScene");
-        }
     }
     IEnumerator GameOver()
     {
@@ -104,4 +90,4 @@ public class PlayerScript : MonoBehaviour
         life--;
     }
 
-} 
+}
