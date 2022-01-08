@@ -14,6 +14,15 @@ public class BosusagiAnimetion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+      if (UsagiAttackArea.isHitAttackArea)
+        {
+            anim.SetBool("Slash", true);
+        }
+        else
+        {
+            anim.SetBool("Slash", false);
+        }
     }
+
+    
 }
