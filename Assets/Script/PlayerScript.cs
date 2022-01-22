@@ -23,7 +23,7 @@ public class PlayerScript : MonoBehaviour
         if (isGround)
         {
             if (Input.GetKeyDown(KeyCode.Space))
-            {
+            {   
                 rb.AddForce(0, 5, 0, ForceMode.Impulse);
                 isGround = false;
             }

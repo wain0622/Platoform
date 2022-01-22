@@ -22,6 +22,16 @@ public class BosusagiAnimetion : MonoBehaviour
         {
             anim.SetBool("Slash", false);
         }
+      if (UsagiRunArea.isRunArea)
+        {
+            anim.SetBool("Run", true);
+            
+        }
+        else
+        {
+            anim.SetBool("Run", false);
+            
+        }
     }
 
     

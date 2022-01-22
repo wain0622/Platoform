@@ -9,6 +9,9 @@ TagManager:
   - Flag
   - Dead
   - Warp
+  - BosUsagi
+  - Mmikamaru
+  - prepare
   layers:
   - Default
   - TransparentFX
