@@ -34,4 +34,20 @@ public class PleyerAnimetion : MonoBehaviour
             anim.SetBool("jump", false);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "prepare")
+        {
+            anim.SetBool("isPrepare", true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "prepare")
+        {
+            anim.SetBool("isPrepare", false);
+        }
+    }
 }
