@@ -12,6 +12,7 @@ TagManager:
   - BosUsagi
   - Mmikamaru
   - prepare
+  - coin
   layers:
   - Default
   - TransparentFX

@@ -78,8 +78,14 @@ public class PlayerScript : MonoBehaviour
 
         if (collision.gameObject.tag == "Flag")
         {
+            ScoreText.score += 10;
             SceneManager.LoadScene("Success");
 
+        }
+
+        if (collision.gameObject.tag == "coin")
+        {
+            ScoreText.score++; 
         }
     }
     IEnumerator GameOver()

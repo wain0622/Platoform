@@ -5,6 +5,7 @@ using UnityEngine;
 public class PleyerAnimetion : MonoBehaviour
 {
     public Animator anim;
+    static public int canonPrepare;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,15 @@ public class PleyerAnimetion : MonoBehaviour
             anim.SetBool("isRunning", true);
         }
         else if (Input.GetKeyUp(KeyCode.D))
+        {
+            anim.SetBool("isRunning", false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            anim.SetBool("isRunning", true);
+        }
+        else if (Input.GetKeyUp(KeyCode.A))
         {
             anim.SetBool("isRunning", false);
         }
@@ -40,6 +50,7 @@ public class PleyerAnimetion : MonoBehaviour
         if (other.tag == "prepare")
         {
             anim.SetBool("isPrepare", true);
+            canonPrepare = 1;
         }
     }
 
@@ -48,6 +59,7 @@ public class PleyerAnimetion : MonoBehaviour
         if (other.tag == "prepare")
         {
             anim.SetBool("isPrepare", false);
+            canonPrepare = 0;
         }
     }
 }

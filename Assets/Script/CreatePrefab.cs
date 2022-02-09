@@ -24,6 +24,7 @@ public class CreatePrefab : MonoBehaviour
 
     void Shot()
     {
+        transform.Rotate(0, 10, 0);
         GameObject tama = Instantiate(tamaPrefab, transform.position, Quaternion.Euler(transform.parent.eulerAngles.x, transform.parent.eulerAngles.y, 0));
         Rigidbody tamarb = tama.GetComponent<Rigidbody>();
         tamarb.AddForce(transform.forward * tamaSpeed);
