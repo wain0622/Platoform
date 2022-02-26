@@ -45,6 +45,11 @@ public class PleyerAnimetion : MonoBehaviour
         }
     }
 
+    public void Death()
+    {
+        anim.SetBool("Death", true);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "prepare")

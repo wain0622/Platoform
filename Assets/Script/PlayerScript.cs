@@ -12,10 +12,13 @@ public class PlayerScript : MonoBehaviour
     public Text scoreText;
     public GameObject pleyer;
     public static int life = 5;
+    public GameObject gameOverPanel;
+    public PleyerAnimetion pleyerAnimetion;
     // Start is called before the first frame update
     void Start()
     {
         isGround = false;
+        gameOverPanel.SetActive(false);
     }
     // Update is called once per frame
     void Update()
@@ -67,13 +70,14 @@ public class PlayerScript : MonoBehaviour
 
         if (collision.gameObject.tag == "Dead")
         {
-            SceneManager.LoadScene("GameOverScene");
+            pleyerAnimetion.Death();
+            gameOverPanel.SetActive(true);
             life--;
         }
 
         if (collision.gameObject.tag == "Warp")
         {
-            StartCoroutine(GameOver());
+            SceneManager.LoadScene("Stege1");
         }
 
         if (collision.gameObject.tag == "Flag")

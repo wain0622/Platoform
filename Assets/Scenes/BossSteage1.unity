@@ -414,7 +414,6 @@ GameObject:
   - component: {fileID: 576360802}
   - component: {fileID: 576360801}
   - component: {fileID: 576360800}
-  - component: {fileID: 576360799}
   m_Layer: 0
   m_Name: Beem
   m_TagString: Untagged
@@ -436,19 +435,6 @@ Transform:
   m_Father: {fileID: 1103465180}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &576360799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 576360797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c2100ad6670b45fda3c03ac6c94f423, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!65 &576360800
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1521,7 +1507,7 @@ PrefabInstance:
     - target: {fileID: 3842655611347300160, guid: aa9b087fef17d4cd99ca5d7d1d2b467a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.19
+      value: -10.52
       objectReference: {fileID: 0}
     - target: {fileID: 3842655611347300160, guid: aa9b087fef17d4cd99ca5d7d1d2b467a,
         type: 3}
