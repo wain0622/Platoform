@@ -14,11 +14,15 @@ public class PlayerScript : MonoBehaviour
     public static int life = 5;
     public GameObject gameOverPanel;
     public PleyerAnimetion pleyerAnimetion;
+    public GameObject warpShutter;
+    static public int warp_1;
+    
     // Start is called before the first frame update
     void Start()
     {
         isGround = false;
         gameOverPanel.SetActive(false);
+        warpShutter.SetActive(false);
     }
     // Update is called once per frame
     void Update()
@@ -77,6 +81,8 @@ public class PlayerScript : MonoBehaviour
 
         if (collision.gameObject.tag == "Warp")
         {
+            warpShutter.SetActive(true);
+            warp_1 = 1;
             SceneManager.LoadScene("Stege1");
         }
 
