@@ -16,17 +16,31 @@ public class PlayerScript : MonoBehaviour
     public PleyerAnimetion pleyerAnimetion;
     public GameObject warpShutter;
     static public int warp_1;
-    
+    public float countUp = 0.0f;
+    public bool isWarp;
+    public float timeLimit = 5.0f;
     // Start is called before the first frame update
     void Start()
     {
         isGround = false;
         gameOverPanel.SetActive(false);
         warpShutter.SetActive(false);
+        isWarp = false;
+      
     }
     // Update is called once per frame
     void Update()
     {
+        if (isWarp)
+        {
+            countUp += Time.deltaTime;
+        }
+
+        if(countUp >= timeLimit)
+        {
+            SceneManager.LoadScene("Stege1");
+        }
+
         if (isGround)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -34,12 +48,6 @@ public class PlayerScript : MonoBehaviour
                 rb.AddForce(0, 5, 0, ForceMode.Impulse);
                 isGround = false;
             }
-        }
-
-        if (transform.position.y < -18)
-        {
-            SceneManager.LoadScene("GameOverScene");
-            life--;
         }
     }
 
@@ -81,9 +89,10 @@ public class PlayerScript : MonoBehaviour
 
         if (collision.gameObject.tag == "Warp")
         {
+            isWarp = true;
             warpShutter.SetActive(true);
             warp_1 = 1;
-            SceneManager.LoadScene("Stege1");
+           
         }
 
         if (collision.gameObject.tag == "Flag")
