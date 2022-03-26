@@ -6,7 +6,7 @@ public class PleyerAnimetion : MonoBehaviour
 {
     public Animator anim;
     static public int canonPrepare;
-
+    public GameObject beam;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +56,7 @@ public class PleyerAnimetion : MonoBehaviour
         {
             anim.SetBool("isPrepare", true);
             canonPrepare = 1;
+            beam.SetActive(true);
         }
     }
 
