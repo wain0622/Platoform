@@ -19,6 +19,7 @@ public class PleyerAnimetion : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.D))
         {
             anim.SetBool("isRunning", true);
+            transform.localEulerAngles = new Vector3(0, -90, 0);
         }
         else if (Input.GetKeyUp(KeyCode.D))
         {
@@ -28,6 +29,7 @@ public class PleyerAnimetion : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             anim.SetBool("isRunning", true);
+            transform.localEulerAngles = new Vector3(0, 90, 0);
         }
         else if (Input.GetKeyUp(KeyCode.A))
         {
