@@ -13,6 +13,7 @@ TagManager:
   - Mmikamaru
   - prepare
   - coin
+  - prepare1
   layers:
   - Default
   - TransparentFX

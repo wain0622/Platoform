@@ -68,6 +68,7 @@ public class PleyerAnimetion : MonoBehaviour
         {
             anim.SetBool("isPrepare", false);
             canonPrepare = 0;
+            beam.SetActive(false);
         }
     }
 }
