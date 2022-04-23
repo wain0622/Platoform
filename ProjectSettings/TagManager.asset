@@ -14,6 +14,7 @@ TagManager:
   - prepare
   - coin
   - prepare1
+  - Beam
   layers:
   - Default
   - TransparentFX
