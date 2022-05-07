@@ -14,10 +14,7 @@ public class BossLife : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (bossLife <= 0)
-        {
-            Destroy(this.gameObject);
-        }
+       
     }
     private void OnTriggerEnter(Collider other)
     {

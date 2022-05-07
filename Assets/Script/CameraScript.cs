@@ -18,6 +18,6 @@ public class CameraScript : MonoBehaviour
         float posy = Player.transform.position.y;
         float posz = Player.transform.position.z;
 
-        transform.position = new Vector3(posx, posy + 2, posz + 16);
+        transform.position = new Vector3(posx, posy + 2, posz + 20);
     }
 }
