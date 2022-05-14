@@ -11,6 +11,8 @@ public class DamageEffect : MonoBehaviour
     private Material _material;
     private Sequence _seq;
 
+   
+
     private void Awake()
     {
         _material = _renderer.material;
@@ -34,6 +36,8 @@ public class DamageEffect : MonoBehaviour
         _seq.Append(DOTween.To(() => Color.white, c => _material.SetColor(PROPERATY_COLOR, c), color, 1.0f));
         _seq.Append(DOTween.To(() => color, c => _material.SetColor(PROPERATY_COLOR,c), Color.white, 1.0f));
         _seq.Play();
+
+        
     }
 
     // Start is called before the first frame update

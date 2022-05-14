@@ -7,10 +7,12 @@ public class PleyerAnimetion : MonoBehaviour
     public Animator anim;
     static public int canonPrepare;
     public GameObject beam;
+    public Camera cameraComponent;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+        cameraComponent.enabled = false;
     }
 
     // Update is called once per frame
@@ -44,6 +46,7 @@ public class PleyerAnimetion : MonoBehaviour
         else if (Input.GetKeyUp(KeyCode.Space))
         {
             anim.SetBool("jump", false);
+
         }
     }
 
@@ -59,7 +62,10 @@ public class PleyerAnimetion : MonoBehaviour
             anim.SetBool("isPrepare", true);
             canonPrepare = 1;
             beam.SetActive(true);
+            cameraComponent.enabled = true;
+                           
         }
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -69,6 +75,7 @@ public class PleyerAnimetion : MonoBehaviour
             anim.SetBool("isPrepare", false);
             canonPrepare = 0;
             beam.SetActive(false);
+            cameraComponent.enabled = false;
         }
     }
 }
