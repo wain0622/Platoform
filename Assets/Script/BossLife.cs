@@ -8,9 +8,11 @@ public class BossLife : MonoBehaviour
     AudioSource audioSource;
     public int bossLife;
     public Animator uAnim;
+    public  bool dathFlag;
     // Start is called before the first frame update
     void Start()
     {
+        dathFlag = false;
         bossLife = 200;
         audioSource = GetComponent<AudioSource>();
         uAnim.SetBool("Death", false);
@@ -27,9 +29,10 @@ public class BossLife : MonoBehaviour
         {
             bossLife -= 75;
             audioSource.PlayOneShot(sound1);
-
+            
             if (bossLife <= 0)
             {
+                dathFlag = true;
                 uAnim.SetBool("Death", true);
             }
             

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UsagiRunArea : MonoBehaviour
 {
-    public static bool isRunArea;
+    public bool isRunArea;
     // Start is called before the first frame update
     void Start()
     {

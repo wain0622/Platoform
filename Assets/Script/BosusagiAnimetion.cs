@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class BosusagiAnimetion : MonoBehaviour
 {
-    private Animator anim;
+    public　static Animator anim;
+    public UsagiRunArea runArea;
+    public BossLife bossLife;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,7 @@ public class BosusagiAnimetion : MonoBehaviour
         {
             anim.SetBool("Slash", true);
         }
-      if (UsagiRunArea.isRunArea)
+      if (runArea.isRunArea)
         {
             anim.SetBool("Run", true);
             
@@ -31,6 +33,12 @@ public class BosusagiAnimetion : MonoBehaviour
         {
             anim.SetBool("Run", false);
             
+        }
+
+      if (bossLife.dathFlag)
+        {
+            anim.SetBool("Slash",false);
+            anim.SetBool("Run", false);
         }
     }
 

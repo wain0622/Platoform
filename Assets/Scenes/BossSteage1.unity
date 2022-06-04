@@ -705,6 +705,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7bfef9ebb0f9464aa3816734d003f03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  runArea: {fileID: 1473477325}
+  bossLife: {fileID: 1037619462}
 --- !u!114 &1037619462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -720,6 +722,7 @@ MonoBehaviour:
   sound1: {fileID: 8300000, guid: 753aaab2b5b4e42e5bb79939c8b30821, type: 3}
   bossLife: 200
   uAnim: {fileID: 1037619460}
+  dathFlag: 0
 --- !u!136 &1037619463
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1350,6 +1353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e648c0f9054d43ed8e6eff23dbdd24c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isRunArea: 0
 --- !u!1 &1612369295 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 742169066457556169, guid: 4fef9bf1fa4d142b581f14e3c8276e9d,
