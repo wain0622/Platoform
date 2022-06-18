@@ -8,6 +8,8 @@ public class PleyerAnimetion : MonoBehaviour
     static public int canonPrepare;
     public GameObject beam;
     public Camera cameraComponent;
+    public PlayerScript ps;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +62,7 @@ public class PleyerAnimetion : MonoBehaviour
         if (other.tag == "prepare")
         {
             anim.SetBool("isPrepare", true);
+            StartCoroutine(AttackEffect());
             canonPrepare = 1;
             beam.SetActive(true);
             cameraComponent.enabled = true;
@@ -77,5 +80,13 @@ public class PleyerAnimetion : MonoBehaviour
             beam.SetActive(false);
             cameraComponent.enabled = false;
         }
+    }
+
+    IEnumerator AttackEffect()
+    {
+
+        ps.enabled = false;
+        yield return new WaitForSeconds(4.5f);
+        ps.enabled = true;
     }
 }

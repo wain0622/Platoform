@@ -31,6 +31,17 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            transform.localEulerAngles = new Vector3(0, -90, 0);
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            transform.localEulerAngles = new Vector3(0, 90, 0);
+        }
+
         if (isWarp)
         {
             countUp += Time.deltaTime;
