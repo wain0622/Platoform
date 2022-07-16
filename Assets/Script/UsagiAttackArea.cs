@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UsagiAttackArea : MonoBehaviour
 {
-    public static bool isHitAttackArea ;
+    public bool isHitAttackArea ;
     // Start is called before the first frame update
     void Start()
     {

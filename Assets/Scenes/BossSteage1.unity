@@ -242,6 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a16b83424cd44586982dd85eb8bca62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isHitAttackArea: 0
 --- !u!1 &215147940
 GameObject:
   m_ObjectHideFlags: 0
@@ -5612,6 +5613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runArea: {fileID: 1473477325}
   bossLife: {fileID: 1037619462}
+  attackArea: {fileID: 55083816}
 --- !u!114 &1037619462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6345,6 +6347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pHP: 100
   gameOver: {fileID: 1923123772}
+  usagiAttack: {fileID: 55083816}
 --- !u!1 &1727458760
 GameObject:
   m_ObjectHideFlags: 0

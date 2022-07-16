@@ -7,6 +7,8 @@ public class BosusagiAnimetion : MonoBehaviour
     public　static Animator anim;
     public UsagiRunArea runArea;
     public BossLife bossLife;
+    public UsagiAttackArea attackArea;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -16,10 +18,10 @@ public class BosusagiAnimetion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      if (UsagiAttackArea.isHitAttackArea)
+        if (attackArea.isHitAttackArea) 
         {
             anim.SetBool("Slash", true);
-        }
+        }                   
         else
         {
             anim.SetBool("Slash", true);
