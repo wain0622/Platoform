@@ -5,6 +5,7 @@ using UnityEngine;
 public class UsagiAttackArea : MonoBehaviour
 {
     public bool isHitAttackArea ;
+    public UsagiRunArea usagiRunArea;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class UsagiAttackArea : MonoBehaviour
         if (other.tag == "Player")
         {
             isHitAttackArea = true;
+            usagiRunArea.isRunArea = false;
         }
        
     }
