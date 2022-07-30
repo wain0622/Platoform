@@ -7,6 +7,7 @@ public class UsagiRunArea : MonoBehaviour
     public bool isRunArea;
     public float diff;
     public GameObject usagi;
+    public Rigidbody rb;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,11 @@ public class UsagiRunArea : MonoBehaviour
         else
         {
             usagi.transform.rotation = Quaternion.Euler(0.0f, 90, 0.0f);
+        }
+
+        if (isRunArea)
+        {
+            rb.velocity = usagi.transform.forward * 5;
         }
     }
 
