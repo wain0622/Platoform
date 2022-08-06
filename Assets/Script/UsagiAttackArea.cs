@@ -33,6 +33,7 @@ public class UsagiAttackArea : MonoBehaviour
         if (other.tag == "Player")
         {
             isHitAttackArea = false;
+            usagiRunArea.isRunArea = true;
         }
     }
 }

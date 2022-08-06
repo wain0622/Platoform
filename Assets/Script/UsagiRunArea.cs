@@ -31,6 +31,7 @@ public class UsagiRunArea : MonoBehaviour
         {
             rb.velocity = usagi.transform.forward * 5;
         }
+       
     }
 
     private void OnTriggerEnter(Collider other)

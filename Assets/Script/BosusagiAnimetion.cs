@@ -24,7 +24,7 @@ public class BosusagiAnimetion : MonoBehaviour
         }                   
         else
         {
-            anim.SetBool("Slash", true);
+            anim.SetBool("Slash", false);
         }
       if (runArea.isRunArea)
         {

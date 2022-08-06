@@ -7,6 +7,7 @@ public class PlyaerHP : MonoBehaviour
     public int pHP = 100;
     public GameObject gameOver;
     public UsagiAttackArea usagiAttack;
+    public BossLife bossLife;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,10 @@ public class PlyaerHP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (bossLife.dathFlag)
+        {
+            this.enabled = false;
+        }
     }
 
     IEnumerator  BossAttack()
