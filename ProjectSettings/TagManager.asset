@@ -16,6 +16,7 @@ TagManager:
   - prepare1
   - Beam
   - UsagiAttack
+  - Energy
   layers:
   - Default
   - TransparentFX
