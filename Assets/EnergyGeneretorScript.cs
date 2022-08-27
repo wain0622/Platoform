@@ -5,21 +5,24 @@ using UnityEngine;
 public class EnergyGeneretorScript : MonoBehaviour
 {
     public GameObject energy;
-    public float energyposition;
-    public BossLife bosslife;
-
+    private Vector3 energyPos;
+    public int energyQuantity;
     // Start is called before the first frame update
     void Start()
     {
-        
+        energyPos = this.transform.position;
+        energyQuantity = 10;
+        for(int i= 0; i < 3; i++)
+        {
+            energyPos.x = Random.Range(-28, 4);
+            Instantiate(energy, energyPos, Quaternion.identity);
+        }
     }
+
 
     // Update is called once per frame
     void Update()
     {
-        if (BossLife.bosslife <= 50)
-        {
-
-        }
+      
     }
 }

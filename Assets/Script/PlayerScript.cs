@@ -19,6 +19,7 @@ public class PlayerScript : MonoBehaviour
     public float countUp = 0.0f;
     public bool isWarp;
     public float timeLimit = 5.0f;
+    public EnergyGeneretorScript energyGeneretorScript;
     // Start is called before the first frame update
     void Start()
     {
@@ -116,6 +117,13 @@ public class PlayerScript : MonoBehaviour
         if (collision.gameObject.tag == "coin")
         {
             ScoreText.score++; 
+        }
+
+        if (collision.gameObject.tag == "Energy")
+        {
+            Destroy(collision.gameObject);
+            energyGeneretorScript.energyQuantity--;
+            
         }
     }
     IEnumerator GameOver()
