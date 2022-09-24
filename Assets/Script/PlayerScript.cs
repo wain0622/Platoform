@@ -20,6 +20,7 @@ public class PlayerScript : MonoBehaviour
     public bool isWarp;
     public float timeLimit = 5.0f;
     public EnergyGeneretorScript energyGeneretorScript;
+    public int getEnergy;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,7 +58,7 @@ public class PlayerScript : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {   
-                rb.AddForce(0, 5, 0, ForceMode.Impulse);
+                rb.AddForce(0, 10, 0, ForceMode.Impulse);
                 isGround = false;
             }
         }
@@ -123,7 +124,7 @@ public class PlayerScript : MonoBehaviour
         {
             Destroy(collision.gameObject);
             energyGeneretorScript.energyQuantity--;
-            
+            getEnergy++;
         }
     }
     IEnumerator GameOver()

@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class EnergyGeneretorScript : MonoBehaviour
 {
     public int energys;
     public GameObject energy;
     private Vector3 energyPos;
     public int energyQuantity;
+    public PlayerScript playerScript;
+    public Text energyText;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,10 +28,13 @@ public class EnergyGeneretorScript : MonoBehaviour
     {
         energys = GameObject.FindGameObjectsWithTag("Energy").Length;
 
-        if (energys <= 2)
+        if (energys <= 2 && playerScript.getEnergy <= 7)
         {
             energyPos.x = Random.Range(-28, 4);
             Instantiate(energy, energyPos, Quaternion.identity);
         }
+
+        energyText.text = "残りエナジー数:" + energyQuantity.ToString();
+
     }
 }

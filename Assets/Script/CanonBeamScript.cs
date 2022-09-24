@@ -5,6 +5,7 @@ using UnityEngine;
 public class CanonBeamScript : MonoBehaviour
 {
     public GameObject Beam;
+    public PlayerScript pS;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,7 @@ public class CanonBeamScript : MonoBehaviour
         if (PleyerAnimetion.canonPrepare == 1)
         {
             Instantiate(Beam, transform.position, Quaternion.identity);
+            pS.getEnergy = 0;
         }
     }
 }

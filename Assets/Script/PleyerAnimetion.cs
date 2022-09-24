@@ -59,7 +59,7 @@ public class PleyerAnimetion : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "prepare")
+        if (other.tag == "prepare" && ps.getEnergy == 10)
         {
             anim.SetBool("isPrepare", true);
             StartCoroutine(AttackEffect());
