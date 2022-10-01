@@ -8,6 +8,7 @@ public class PlyaerHP : MonoBehaviour
     public GameObject gameOver;
     public UsagiAttackArea usagiAttack;
     public BossLife bossLife;
+    public GameObject hart;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,17 @@ public class PlyaerHP : MonoBehaviour
         if (bossLife.dathFlag)
         {
             this.enabled = false;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "hart")
+        {
+            pHP =pHP + 20;
+            Destroy(collision.gameObject);
+
+            
         }
     }
 

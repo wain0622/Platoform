@@ -17,6 +17,7 @@ TagManager:
   - Beam
   - UsagiAttack
   - Energy
+  - Hart
   layers:
   - Default
   - TransparentFX
