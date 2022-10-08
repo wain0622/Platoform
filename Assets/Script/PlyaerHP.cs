@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PlyaerHP : MonoBehaviour
 {
     public int pHP = 100;
@@ -9,6 +9,7 @@ public class PlyaerHP : MonoBehaviour
     public UsagiAttackArea usagiAttack;
     public BossLife bossLife;
     public GameObject hart;
+    public Text pHPText;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,11 +24,23 @@ public class PlyaerHP : MonoBehaviour
         {
             this.enabled = false;
         }
+
+        pHPText.text = "プレイヤーHP:" + pHP;
+
+        if (pHP <= 20)
+        {
+            pHPText.color = new Color(1.0f, 0.0f, 0.0f);
+            pHPText.text = "プレイヤーHP:" + pHP + "ピンチ!ハートに触れて回復しよう!!".ToString();
+        }
+        else
+        {
+            pHPText.color = new Color(0.0f, 0.0f, 0.0f);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "hart")
+        if (collision.gameObject.tag == "Hart")
         {
             pHP =pHP + 20;
             Destroy(collision.gameObject);
