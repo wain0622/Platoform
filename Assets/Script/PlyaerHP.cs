@@ -10,9 +10,11 @@ public class PlyaerHP : MonoBehaviour
     public BossLife bossLife;
     public GameObject hart;
     public Text pHPText;
+    public GameObject redEffect;
     // Start is called before the first frame update
     void Start()
     {
+        redEffect.SetActive(false);
         StartCoroutine(BossAttack());
         gameOver.SetActive(false);
     }
@@ -30,11 +32,13 @@ public class PlyaerHP : MonoBehaviour
         if (pHP <= 20)
         {
             pHPText.color = new Color(1.0f, 0.0f, 0.0f);
-            pHPText.text = "プレイヤーHP:" + pHP + "ピンチ!ハートに触れて回復しよう!!".ToString();
+            pHPText.text = "プレイヤーHP:" + pHP.ToString();
+            redEffect.SetActive(true);
         }
         else
         {
             pHPText.color = new Color(0.0f, 0.0f, 0.0f);
+            redEffect.SetActive(false);
         }
     }
 
@@ -60,6 +64,7 @@ public class PlyaerHP : MonoBehaviour
                 if (pHP == 0)
                 {
                     gameOver.SetActive(true);
+                    redEffect.SetActive(false);
                 }
                 yield return new WaitForSeconds(1.5f);
                

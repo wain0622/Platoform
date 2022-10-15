@@ -34,11 +34,11 @@ public class EnergyGeneretorScript : MonoBehaviour
             Instantiate(energy, energyPos, Quaternion.identity);
         }
 
-        energyText.text = "残りエナジー数:" + energyQuantity.ToString() + "エナジーを10個集めてレーザーを撃とう!";
+        energyText.text = ":" + energyQuantity.ToString() + "エナジーを10個集めてレーザーを撃とう!";
 
         if (energyQuantity == 0)
         {
-            energyText.text = "残りエナジー数:" + energyQuantity.ToString() + "エナジーが10個集まったからレーザーが撃てるよ";
+            energyText.text = ":" + energyQuantity.ToString() + "エナジーが10個集まったからレーザーが撃てるよ";
         }
 
     }
