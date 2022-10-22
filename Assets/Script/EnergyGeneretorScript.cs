@@ -10,6 +10,7 @@ public class EnergyGeneretorScript : MonoBehaviour
     public int energyQuantity;
     public PlayerScript playerScript;
     public Text energyText;
+    public GameObject lasertext;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,8 @@ public class EnergyGeneretorScript : MonoBehaviour
             energyPos.x = Random.Range(-28, 4);
             Instantiate(energy, energyPos, Quaternion.identity);
         }
+        lasertext.SetActive(false);
+        StartCoroutine("LaserText");
     }
 
 
@@ -38,8 +41,25 @@ public class EnergyGeneretorScript : MonoBehaviour
 
         if (energyQuantity == 0)
         {
-            energyText.text = ":" + energyQuantity.ToString() + "エナジーが10個集まったからレーザーが撃てるよ";
+            energyText.text = ":" + energyQuantity.ToString();
         }
+    }
 
+    IEnumerator LaserText()
+    {
+        while (true)
+        {
+            yield return new WaitUntil(() => energyQuantity == 0);
+            while (energyQuantity == 0)
+            {
+                lasertext.SetActive(true);
+                yield return new WaitForSeconds(1);
+                lasertext.SetActive(false);
+                yield return new WaitForSeconds(1);
+
+            }
+
+        }
+             
     }
 }

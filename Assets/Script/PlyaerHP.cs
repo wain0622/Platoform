@@ -27,12 +27,12 @@ public class PlyaerHP : MonoBehaviour
             this.enabled = false;
         }
 
-        pHPText.text = "プレイヤーHP:" + pHP;
+        pHPText.text = "HP:" + pHP;
 
         if (pHP <= 20)
         {
             pHPText.color = new Color(1.0f, 0.0f, 0.0f);
-            pHPText.text = "プレイヤーHP:" + pHP.ToString();
+            pHPText.text = "HP:" + pHP.ToString();
             redEffect.SetActive(true);
         }
         else
