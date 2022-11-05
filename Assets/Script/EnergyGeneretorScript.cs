@@ -52,11 +52,17 @@ public class EnergyGeneretorScript : MonoBehaviour
             yield return new WaitUntil(() => energyQuantity == 0);
             while (energyQuantity == 0)
             {
-                lasertext.SetActive(true);
-                yield return new WaitForSeconds(1);
-                lasertext.SetActive(false);
-                yield return new WaitForSeconds(1);
-
+               if (energyQuantity == 0)
+                {
+                    lasertext.SetActive(true);
+                    yield return new WaitForSeconds(1);
+                    lasertext.SetActive(false);
+                    yield return new WaitForSeconds(1);
+                }
+               else
+                {
+                    lasertext.SetActive(false);
+                }
             }
 
         }

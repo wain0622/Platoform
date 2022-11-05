@@ -5182,6 +5182,11 @@ PrefabInstance:
       propertyPath: ps
       value: 
       objectReference: {fileID: 1612369296}
+    - target: {fileID: 742169065298634045, guid: 4fef9bf1fa4d142b581f14e3c8276e9d,
+        type: 3}
+      propertyPath: energyGeneretorScript
+      value: 
+      objectReference: {fileID: 155100632}
     - target: {fileID: 742169065298634047, guid: 4fef9bf1fa4d142b581f14e3c8276e9d,
         type: 3}
       propertyPath: energyGeneretorScript

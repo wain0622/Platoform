@@ -9,6 +9,7 @@ public class PleyerAnimetion : MonoBehaviour
     public GameObject beam;
     public Camera cameraComponent;
     public PlayerScript ps;
+    public EnergyGeneretorScript energyGeneretorScript;
 
     // Start is called before the first frame update
     void Start()
@@ -79,6 +80,7 @@ public class PleyerAnimetion : MonoBehaviour
             canonPrepare = 0;
             beam.SetActive(false);
             cameraComponent.enabled = false;
+            energyGeneretorScript.energyQuantity = 10;
         }
     }
 
